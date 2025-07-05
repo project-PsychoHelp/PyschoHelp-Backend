@@ -13,7 +13,7 @@ public class PyschoHelpPlatformApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PyschoHelpPlatformApplication.class, args);
-
+		//inicilizar el perfil de administrador
 	}
 
 }
