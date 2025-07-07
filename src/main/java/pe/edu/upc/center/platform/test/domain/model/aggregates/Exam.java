@@ -18,7 +18,7 @@ public class Exam extends AuditableAbstractAggregateRoot<Exam> {
     private String description;
 
     @Getter
-    @ManyToOne(fetch =FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "category_exam_id", nullable = false)
     private CategoryExam categoryExam;
 
@@ -27,6 +27,11 @@ public class Exam extends AuditableAbstractAggregateRoot<Exam> {
 
     @Column(name = "number_questions", nullable = false)
     private int numberQuestions;
+
+
+
+    protected Exam(){}
+
 
     public Exam(String description, CategoryExam categoryExam, int rating, int numberQuestions) {
         this.description = description;
@@ -42,4 +47,14 @@ public class Exam extends AuditableAbstractAggregateRoot<Exam> {
         this.numberQuestions = command.numberQuestions();
 
     }
+
+    public Exam updateInformation(String description, CategoryExam categoryExam, int rating, int numberQuestions) {
+        this.description = description;
+        this.categoryExam = categoryExam;
+        this.rating = rating;
+        this.numberQuestions = numberQuestions;
+        return this;
+    }
+
+
 }

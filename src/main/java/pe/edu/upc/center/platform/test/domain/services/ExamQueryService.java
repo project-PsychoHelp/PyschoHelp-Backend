@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ExamQueryService {
-    List<Exam> hangle(GetAllExamsQuery query);
+    List<Exam> handle(GetAllExamsQuery query);
     Optional<Exam> handle(GetExamByIdQuery query);
 
 }
