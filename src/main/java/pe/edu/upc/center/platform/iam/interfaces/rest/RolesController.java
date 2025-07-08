@@ -13,10 +13,7 @@ import pe.edu.upc.center.platform.iam.interfaces.rest.transform.RoleResourceFrom
 
 import java.util.List;
 
-/**
- *  Roles Controller
- *  This controller is responsible for handling all the requests related to roles
- */
+
 @RestController
 @RequestMapping(value = "/ap/v1/roles", produces = MediaType.APPLICATION_JSON_VALUE)
 @Tag(name = "Roles", description = "Role Management Endpoints")
@@ -28,11 +25,6 @@ public class RolesController {
     this.roleQueryService = roleQueryService;
   }
 
-  /**
-   * Get all roles
-   * @return List of role resources
-   * @see RoleResource
-   */
   @GetMapping
   public ResponseEntity<List<RoleResource>> getAllRoles() {
     var getAllRolesQuery = new GetAllRolesQuery();

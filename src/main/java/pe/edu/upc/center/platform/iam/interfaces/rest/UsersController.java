@@ -32,12 +32,6 @@ public class UsersController {
     this.userQueryService = userQueryService;
   }
 
-  /**
-   * This method returns all the users.
-   *
-   * @return a list of user resources.
-   * @see UserResource
-   */
   @GetMapping
   public ResponseEntity<List<UserResource>> getAllUsers() {
     var getAllUsersQuery = new GetAllUsersQuery();
@@ -48,14 +42,6 @@ public class UsersController {
     return ResponseEntity.ok(userResources);
   }
 
-  /**
-   * This method returns the user with the given id.
-   *
-   * @param userId the user id.
-   * @return the user resource with the given id
-   * @throws RuntimeException if the user is not found
-   * @see UserResource
-   */
   @GetMapping(value = "/{userId}")
   public ResponseEntity<UserResource> getUserById(@PathVariable Long userId) {
     var getUserByIdQuery = new GetUserByIdQuery(userId);
