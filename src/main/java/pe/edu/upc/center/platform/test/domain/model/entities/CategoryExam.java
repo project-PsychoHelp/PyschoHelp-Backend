@@ -33,7 +33,7 @@ public class CategoryExam {
         return name.name();
     }
     public static CategoryExam getDefaultCategoryExam() {
-        return new CategoryExam(CategoriesExam.PSYCHOLOGICAL);
+        return new CategoryExam(CategoriesExam.PREMIUN);
     }
     public static CategoryExam toCategoryExamFromName(String name) {
         return new CategoryExam(CategoriesExam.valueOf(name));
