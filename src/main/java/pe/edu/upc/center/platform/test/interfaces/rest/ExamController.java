@@ -44,10 +44,10 @@ public class ExamController {
             description = "Creates a new exam."
     )
     @ApiResponses({
-            @ApiResponse(responseCode = "201", description = "Disease created successfully",
+            @ApiResponse(responseCode = "201", description = "Exam created successfully",
                     content = @Content(schema = @Schema(implementation = ExamResource.class))),
-            @ApiResponse(responseCode = "400", description = "Invalid diagnosis ID or request body"),
-            @ApiResponse(responseCode = "404", description = "Diagnosis not found")
+            @ApiResponse(responseCode = "400", description = "Invalid exam ID or request body"),
+            @ApiResponse(responseCode = "404", description = "Exam not found")
     })
     @PostMapping
     public ResponseEntity<ExamResource> createExam(

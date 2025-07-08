@@ -60,8 +60,6 @@ public class ExamCommandServiceImpl implements ExamCommandService {
         //
 
 
-
-
         var examToUpdate = this.examRepository.findById(examId).get();
         examToUpdate.updateInformation(command.description(), categoryExamEntity, command.rating(), command.numberQuestion());
 
