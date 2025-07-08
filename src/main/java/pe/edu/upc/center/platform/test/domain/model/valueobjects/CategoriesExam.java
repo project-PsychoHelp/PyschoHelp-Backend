@@ -1,10 +1,8 @@
 package pe.edu.upc.center.platform.test.domain.model.valueobjects;
 
 public enum CategoriesExam {
-    PSYCHOLOGICAL(1),
-    MEDICAL(2),
-    EDUCATIONAL(3),
-    SOCIAL(4);
+    PREMIUN(1),
+    NOPREMIUN(2);
 
     private final int value;
 
